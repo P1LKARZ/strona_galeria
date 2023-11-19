@@ -30,17 +30,82 @@
         </div>
         <div id="prawy">
             
-            <button>prev</button>
-            <img src="1.jpg" alt="galeria">
-            <button>next</button>
+            
+            <div id="zdjecieglowne">
+                <img src="1.jpg" alt="galeria"></div>
+            <button onclick="przycisk('prev')">prev</button>
+            <button onclick="przycisk('next')">next</button>
             <hr>
-            <div id="zdjencia">
-            <img src="1.jpg" alt="miniatura" >
-            <img src="2.jpg" alt="miniatura" >
-            <img src="3.jpg" alt="miniatura" >
-            <img src="4.jpg" alt="miniatura" >
-            <img src="5.jpg" alt="miniatura" ></div>
+            <div id="zdjecia">
+                <img src="1.jpg" alt="miniatura" onclick="zd('a')" >
+                <img src="2.jpg" alt="miniatura" onclick="zd('b')">
+                <img src="3.jpg" alt="miniatura" onclick="zd('c')" >
+                <img src="4.jpg" alt="miniatura" onclick="zd('d')">
+                <img src="5.jpg" alt="miniatura" onclick="zd('e')">
+            </div>
         </div>
+        <script>
+                var numer=1;
+                            function przycisk(kierunek)
+                            {
+                            
+                        if(kierunek=="next")
+                        {
+                            numer++;
+                        }   
+                        else
+                        {
+                            numer--;
+                        }
+                        if(numer>5)
+                        {
+                            numer=1;
+                        }
+                        if(numer<1)
+                        numer=5;
+                            var plik ="<img src=\"" + numer + ".jpg\" />";
+                                zdjecieglowne.innerHTML=plik;
+                            }
+
+        function zd(litera)
+        {
+            
+            switch(litera)
+            {
+          
+                case "a": 
+                {
+                    var zdjecie="<img src=\"1.jpg\"/>";
+                    zdjecieglowne.innerHTML=zdjecie;
+                   
+                }break;
+                    case "b": 
+                    {
+                        var zdjecie="<img src=\"2.jpg\"/>";
+                        zdjecieglowne.innerHTML=zdjecie;
+                        
+                    }break;
+                        case "c": 
+                        {
+                            var zdjecie="<img src=\"3.jpg\"/>";
+                            zdjecieglowne.innerHTML=zdjecie;
+                            
+                        }break; 
+                            case "d": 
+                            {
+                                var zdjecie="<img src=\"4.jpg\"/>";
+                                zdjecieglowne.innerHTML=zdjecie;
+                                
+                            }break;
+                                case "e": 
+                                {
+                                    var zdjecie="<img src=\"5.jpg\"/>";
+                                    zdjecieglowne.innerHTML=zdjecie;
+                                    
+                                }break;
+            }
+        }
+        </script>
    <footer>
         <a href="https://pixabay.com" target="_blank">Więcej obrazów</a>
         <p>Galerię wykonał:00000000000</p>

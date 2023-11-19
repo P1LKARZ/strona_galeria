@@ -7,28 +7,46 @@
 }
 #lewy
 {
-float: left;
+ float: left;
 width: 20%;
-height: 600px;
+height: 700px;
 margin: 30px;
 box-shadow: 15px 15px 10px dimgray;
-
+overflow: auto; 
 }
 #lewy>img
 {
     width: 100%;
 }
+
 #prawy
 {
-    float: left ;
+float: left ;
 width: 65%;
 height: 600px;
 }
-#zdjencia>img
+#prawy>img
+{
+    width: 500px;
+    margin: 30px;
+    box-shadow: 15px 15px 10px dimgray;
+}
+#zdjecia>img
 {
     width: 140px;
     padding: 2px;
-    border-radius: 5%;
+    border-radius: 5%;  
+}
+#zdjecia>img:hover
+{
+    border: 1px;
+    border-style: dashed;
+    border-color: rgb(0, 0, 0);
+}
+
+table
+{
+    border: 1px dashed black;
 }
 footer
 {clear: both;}
